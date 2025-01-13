@@ -72,3 +72,10 @@ rei:
     addi $t1, $t1, 4  # move para o próximo elemento
     addi $a1, $a1, 1  # incrementa o contador de colunas
     j loopcolumn
+
+    end:
+    la $a0, ($a2)
+    li $v0, 1         # imprime
+    syscall
+    li $v0, 10        # termina
+    syscall
