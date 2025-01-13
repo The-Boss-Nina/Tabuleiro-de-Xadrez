@@ -67,3 +67,8 @@ rei:
     bne $t4, $t7, error
     addi $a2, $a2, 50
     j nextcolumn
+
+    nextcolumn:
+    addi $t1, $t1, 4  # move para o próximo elemento
+    addi $a1, $a1, 1  # incrementa o contador de colunas
+    j loopcolumn
