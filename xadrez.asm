@@ -19,3 +19,26 @@ loopcolumn:
         
     ld $s0, ($t1)         # carrega o endereço do elemento atual
     ld $t3, ($s0)         # obtém o valor do elemento
+
+    la $t5, $peao        # verifica se o valor é um peão
+    ld $t6, ($t5)
+    beq $t3, $t6, peao
+    la $t5, $cavalo      # verifica se o valor é um cavalo
+    ld $t6, ($t5)
+    beq $t3, $t6, cavalo
+    la $t5, $bispo       # verifica se o valor é um bispo
+    ld $t6, ($t5)
+    beq $t3, $t6, bispo
+    la $t5, $torre       # verifica se o valor é uma torre
+    ld $t6, ($t5)
+    beq $t3, $t6, torre
+    la $t5, $rainha      # verifica se o valor é uma rainha
+    ld $t6, ($t5)
+    beq $t3, $t6, rainha
+    la $t5, $rei         # verifica se o valor é um rei
+    ld $t6, ($t5)
+    beq $t3, $t6, rei
+    la $t5, $branco      # verifica se o valor é branco
+    ld $t6, ($t5)
+    bne $t3, $t6, error  # se não for branco, é erro
+    j nextcolumn
