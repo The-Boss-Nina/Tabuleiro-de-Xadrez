@@ -42,3 +42,28 @@ loopcolumn:
     ld $t6, ($t5)
     bne $t3, $t6, error  # se não for branco, é erro
     j nextcolumn
+
+peao:
+    bne $t4, $t7, error # valida a segunda parte
+    addi $a2, $a2, 1
+    j nextcolumn
+cavalo:
+    bne $t4, $t7, error
+    addi $a2, $a2, 3
+    j nextcolumn
+bispo:
+    bne $t4, $t7, error
+    addi $a2, $a2, 3
+    j nextcolumn
+torre:
+    bne $t4, $t7, error
+    addi $a2, $a2, 5
+    j nextcolumn
+rainha:
+    bne $t4, $t7, error
+    addi $a2, $a2, 10
+    j nextcolumn
+rei:
+    bne $t4, $t7, error
+    addi $a2, $a2, 50
+    j nextcolumn
