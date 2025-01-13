@@ -13,3 +13,9 @@ loopline:
     li $a1, 0           # reseta o contador de colunas
     addi $a3, $a3, 4    # ajusta o ponteiro para a próxima linha
     ld $t1, ($a3)       # carrega o endereço da linha atual
+
+loopcolumn:
+    bgt $a1, 7, loopline  # volta ao loop de linha se as colunas forem completadas
+        
+    ld $s0, ($t1)         # carrega o endereço do elemento atual
+    ld $t3, ($s0)         # obtém o valor do elemento
