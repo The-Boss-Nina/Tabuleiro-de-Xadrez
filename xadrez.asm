@@ -79,3 +79,11 @@ rei:
     syscall
     li $v0, 10        # termina
     syscall
+
+    .text
+error:
+    la $a0, $erro
+    li $v0, 4        # imprime
+    syscall
+    li $v0, 10       # termina
+    syscall
