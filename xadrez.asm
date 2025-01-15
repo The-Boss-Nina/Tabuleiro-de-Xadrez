@@ -87,3 +87,46 @@ error:
     syscall
     li $v0, 10       # termina
     syscall
+
+    .data
+$line1: 
+	.word $torre,  $cavalo, $bispo,  $rei,    $rainha, $bispo,  $cavalo, $torre
+$line2: 
+	.word $peao,   $peao,   $peao,   $peao,   $peao,   $peao,   $peao,   $peao
+$line3: 
+	.word $branco, $branco, $branco, $branco, $branco, $branco, $branco, $branco
+$line4: 
+	.word $branco, $branco, $branco, $branco, $branco, $branco, $branco, $branco
+$line5: 
+	.word $branco, $branco, $branco, $branco, $branco, $branco, $branco, $branco
+$line6: 
+	.word $branco, $branco, $branco, $branco, $branco, $branco, $branco, $branco
+$line7: 
+	.word $peao,   $peao,   $peao,   $peao,   $peao,   $peao,   $peao,   $peao
+$line8: 
+	.word $torre,  $cavalo, $bispo,  $rainha, $rei,    $bispo,  $cavalo, $torre
+$board: 
+	.word $line1, $line2, $line3, $line4, $line5, $line6, $line7, $line8 # lista de enderecos (forma a matriz 2d)
+$erro: 
+	.asciiz "\nerror!\n"
+$peao: 
+	.align 3
+	.ascii "peão"
+$cavalo: 
+	.align 3
+	.ascii "cavalo"
+$bispo: 
+	.align 3
+	.ascii "bispo"
+$torre: 
+	.align 3
+	.ascii "torre"
+$rainha: 
+	.align 3
+	.ascii "rainha"
+$rei: 
+	.align 3
+	.ascii "rei"
+$branco: 
+	.align 3
+	.ascii ""
