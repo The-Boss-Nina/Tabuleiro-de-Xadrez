@@ -1,4 +1,4 @@
-# Calculadora de Pontuação - Tabuleiro de Xadrez
+# Tabuleiro de Xadrez
 
 Este projeto é um programa desenvolvido em Assembly que calcula o valor total das peças em um tabuleiro de xadrez 8x8. Cada peça possui um valor associado, e o programa percorre o tabuleiro somando os valores das peças e exibindo o total.
 
